@@ -9,3 +9,14 @@ C:\Users\Gagan\source\repos\office-work\LinqPractical\bin\Debug\netcoreapp3.1\Li
 C:\Users\Gagan\source\repos\office-work\LinqPractical\bin\Debug\netcoreapp3.1\LinqPractical.pdb
 C:\Users\Gagan\source\repos\office-work\LinqPractical\obj\Debug\netcoreapp3.1\LinqPractical.dll
 C:\Users\Gagan\source\repos\office-work\LinqPractical\obj\Debug\netcoreapp3.1\LinqPractical.pdb
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\bin\Debug\netcoreapp3.1\LinqPractical.exe
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\bin\Debug\netcoreapp3.1\LinqPractical.deps.json
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\bin\Debug\netcoreapp3.1\LinqPractical.runtimeconfig.json
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\bin\Debug\netcoreapp3.1\LinqPractical.runtimeconfig.dev.json
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\bin\Debug\netcoreapp3.1\LinqPractical.dll
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\bin\Debug\netcoreapp3.1\LinqPractical.pdb
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\obj\Debug\netcoreapp3.1\LinqPractical.csprojAssemblyReference.cache
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\obj\Debug\netcoreapp3.1\LinqPractical.AssemblyInfoInputs.cache
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\obj\Debug\netcoreapp3.1\LinqPractical.AssemblyInfo.cs
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\obj\Debug\netcoreapp3.1\LinqPractical.dll
+C:\Users\Gagan\source\repos\office-work\LinqQuery\LinqPractical\obj\Debug\netcoreapp3.1\LinqPractical.pdb

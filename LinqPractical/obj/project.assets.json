@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gagan\\source\\repos\\office-work\\LinqPractical\\LinqPractical.csproj",
+      "projectUniqueName": "C:\\Users\\Gagan\\source\\repos\\office-work\\LinqQuery\\LinqPractical\\LinqPractical.csproj",
       "projectName": "LinqPractical",
-      "projectPath": "C:\\Users\\Gagan\\source\\repos\\office-work\\LinqPractical\\LinqPractical.csproj",
+      "projectPath": "C:\\Users\\Gagan\\source\\repos\\office-work\\LinqQuery\\LinqPractical\\LinqPractical.csproj",
       "packagesPath": "C:\\Users\\Gagan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gagan\\source\\repos\\office-work\\LinqPractical\\obj\\",
+      "outputPath": "C:\\Users\\Gagan\\source\\repos\\office-work\\LinqQuery\\LinqPractical\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gagan\\AppData\\Roaming\\NuGet\\NuGet.Config",

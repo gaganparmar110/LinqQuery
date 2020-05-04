@@ -128,18 +128,326 @@ new Incentives() { EmployeeRefId = 2, IncentiveDate = "01-JAN-13" , IncentiveAmo
             Console.WriteLine(name);
         }
         */
-        /*
-         13. Get First_Name from employee table after replacing 'o' with '$'
-            var firstName = employee.Where(s => s.EmployeeId == 1)
-                   .Select(s => s.FirstName.Replace('o','$'));
-            foreach (var name in firstName)
+            /*
+             13. Get First_Name from employee table after replacing 'o' with '$'
+                var firstName = employee.Where(s => s.EmployeeId == 1)
+                       .Select(s => s.FirstName.Replace('o','$'));
+                foreach (var name in firstName)
+                {
+                    Console.WriteLine(name);
+                }
+                */
+
+            /*
+             14. Get First_Name and Last_Name as single column from employee table separated by a '_'
+            var singleColumn = from names in employee
+                            select new
+                            {
+                                FullName = names.FirstName+'_'+names.LastName
+                            };
+            foreach (var name in singleColumn)
             {
                 Console.WriteLine(name);
             }
             */
+            /*
+             15.  Get FIRST_NAME ,Joining year,Joining Month and Joining Date from employee table
+            var joiningDetail = from joining in employee
+                                select new
+                                {
+                                    joining.FirstName, joining.JoiningDate
+                                };
+            foreach(var detail in joiningDetail)
+            {
+                Console.WriteLine(detail);
+            }
+            */
 
+            /*
+             16. Get all employee details from the employee table order by First_Name Ascending
+            var Employee = from emp in employee
+                           orderby(emp.FirstName) 
+                           select new
+                           {
+                               emp.EmployeeId,
+                               emp.FirstName,
+                               emp.LastName,
+                               emp.Salary,
+                               emp.JoiningDate,
+                               emp.Department
+                           }
+                           ;
 
+            foreach (var name in Employee)
+            {
+                Console.WriteLine(name);
+            }
+            */
+            /*
+             17. Get all employee details from the employee table order by First_Name descending
+            var Employee = from emp in employee
+                           orderby emp.FirstName descending
+                           select new
+                           {
+                               emp.EmployeeId,
+                               emp.FirstName,
+                               emp.LastName,
+                               emp.Salary,
+                               emp.JoiningDate,
+                               emp.Department
+                           }
+                          ;
 
+            foreach (var name in Employee)
+            {
+                Console.WriteLine(name);
+            }
+            */
+            /*
+             18. Get all employee details from the employee table order by First_Name Ascending and Salary descending
+
+            var Employee = from emp in employee
+                           orderby (emp.FirstName), emp.Salary descending
+                           select new
+                           {
+                               emp.EmployeeId,  emp.FirstName,  emp.LastName,   emp.Salary,    emp.JoiningDate,  emp.Department
+                           }
+                         ;
+
+            foreach (var name in Employee)
+            {
+                Console.WriteLine(name);
+            }
+            */
+            /*
+             19. Get employee details from employee table whose employee name is “John”
+            var Employee = from emp in employee
+                           where emp.FirstName=="John"
+                           select new
+                           {
+                               emp.EmployeeId,
+                               emp.FirstName,
+                               emp.LastName,
+                               emp.Salary,
+                               emp.JoiningDate,
+                               emp.Department
+                           };
+
+            foreach (var name in Employee)
+            {
+                Console.WriteLine(name);
+            }
+            */
+            /*  
+             20. Get employee details from employee table whose employee name is “John” and "Roy"
+            var Employee = from emp in employee
+                           where emp.FirstName=="John" || emp.FirstName=="Roy"
+                           select new
+                           {
+                               emp.EmployeeId,
+                               emp.FirstName,
+                               emp.LastName,
+                               emp.Salary,
+                               emp.JoiningDate,
+                               emp.Department
+                           };
+
+            foreach (var name in Employee)
+            {
+                Console.WriteLine(name);
+            }
+            */
+            /*
+             21. Get employee details from employee table whose employee name are not “John” and “Roy”
+            var Employee = from emp in employee
+                           where emp.FirstName != "John" && emp.FirstName != "Roy"
+                           select new
+                           {
+                               emp.EmployeeId,
+                               emp.FirstName,
+                               emp.LastName,
+                               emp.Salary,
+                               emp.JoiningDate,
+                               emp.Department
+                           };
+
+            foreach (var name in Employee)
+            {
+                Console.WriteLine(name);
+            }
+            */
+            /*
+             22. Get employee details from employee table whose first name starts with 'J'
+            var Employee = from emp in employee
+                           where emp.FirstName.StartsWith("J")
+                           select new
+                           {
+                               emp.EmployeeId,
+                               emp.FirstName,
+                               emp.LastName,
+                               emp.Salary,
+                               emp.JoiningDate,
+                               emp.Department
+                           };
+
+            foreach (var name in Employee)
+            {
+                Console.WriteLine(name);
+            }
+            */
+            /* 
+            23. Get employee details from employee table whose first name contains 'o'
+           var Employee = from emp in employee
+                          where emp.FirstName.Contains("o")
+                          select new
+                          {
+                              emp.EmployeeId,
+                              emp.FirstName,
+                              emp.LastName,
+                              emp.Salary,
+                              emp.JoiningDate,
+                              emp.Department
+                          };
+
+           foreach (var name in Employee)
+           {
+               Console.WriteLine(name);
+           }
+           */
+            /*
+             24.Get employee details from employee table whose first name ends with 'n'
+           var Employee = from emp in employee
+                          where emp.FirstName.EndsWith("n")
+                          select new
+                          {
+                              emp.EmployeeId,
+                              emp.FirstName,
+                              emp.LastName,
+                              emp.Salary,
+                              emp.JoiningDate,
+                              emp.Department
+                          };
+
+             foreach (var name in Employee)
+             {
+                 Console.WriteLine(name);
+             }
+             */
+            /*
+           25. Get employee details from employee table whose first name ends with 'n' and name contains 4 letters
+           var Employee = from emp in employee
+                          where emp.FirstName.EndsWith("n") && emp.FirstName.Length==4
+                          select new
+                          {
+                              emp.EmployeeId,
+                              emp.FirstName,
+                              emp.LastName,
+                              emp.Salary,
+                              emp.JoiningDate,
+                              emp.Department
+                          };
+
+           foreach (var name in Employee)
+           {
+               Console.WriteLine(name);
+           }
+           */
+            /*
+             26. Get employee details from employee table whose first name starts with 'J' and name contains 4 letters
+             var Employee = from emp in employee
+                            where emp.FirstName.StartsWith("J") && emp.FirstName.Length == 4
+                            select new
+                            {
+                                emp.EmployeeId,
+                                emp.FirstName,
+                                emp.LastName,
+                                emp.Salary,
+                                emp.JoiningDate,
+                                emp.Department
+                            };
+
+             foreach (var name in Employee)
+             {
+                 Console.WriteLine(name);
+             }
+             */
+            /*
+           27. Get employee details from employee table whose Salary greater than 600000
+           var Employee = from emp in employee
+                          where emp.Salary>600000
+                          select new
+                          {
+                              emp.EmployeeId,
+                              emp.FirstName,
+                              emp.LastName,
+                              emp.Salary,
+                              emp.JoiningDate,
+                              emp.Department
+                          };
+
+           foreach (var name in Employee)
+           {
+               Console.WriteLine(name);
+           }
+           */
+            /*
+             28. Get employee details from employee table whose Salary less than 800000
+             var Employee = from emp in employee
+                            where emp.Salary < 800000
+                            select new
+                            {
+                                emp.EmployeeId,
+                                emp.FirstName,
+                                emp.LastName,
+                                emp.Salary,
+                                emp.JoiningDate,
+                                emp.Department
+                            };
+
+             foreach (var name in Employee)
+             {
+                 Console.WriteLine(name);
+             }
+             */
+            /*
+           29. Get employee details from employee table whose Salary between 500000 and 800000
+
+           var Employee = from emp in employee
+                          where emp.Salary > 500000 && emp.Salary < 800000
+                          select new
+                          {
+                              emp.EmployeeId,
+                              emp.FirstName,
+                              emp.LastName,
+                              emp.Salary,
+                              emp.JoiningDate,
+                              emp.Department
+                          };
+
+           foreach (var name in Employee)
+           {
+               Console.WriteLine(name);
+           }
+           */
+           /*
+            30. Get employee details from employee table whose name is 'John' and 'Michael'
+            var Employee = from emp in employee
+                           where emp.FirstName == "John" || emp.FirstName == "Roy"
+                           select new
+                           {
+                               emp.EmployeeId,
+                               emp.FirstName,
+                               emp.LastName,
+                               emp.Salary,
+                               emp.JoiningDate,
+                               emp.Department
+                           };
+
+            foreach (var name in Employee)
+            {
+                Console.WriteLine(name);
+            }
+            */
 
 
 
