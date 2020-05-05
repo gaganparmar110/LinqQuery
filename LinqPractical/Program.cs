@@ -12,14 +12,14 @@ namespace LinqPractical
 
             IList<Employee> employee = new List<Employee>()
             {
-new Employee() { EmployeeId = 1, FirstName = "John" , LastName = "Abraham",Salary=1000000,JoiningDate="01-JAN-13 12.00.00 AM",Department="Banking" },
+new Employee() { EmployeeId = 1, FirstName = "John" , LastName = "Abraham",Salary=1000000,JoiningDate= "01-JAN-13 12.00.00 AM",Department="Banking" },
 new Employee() { EmployeeId = 2, FirstName = "Michael" , LastName = "Clarke",Salary=800000,JoiningDate="01-JAN-13 12.00.00 AM",Department="Insurance" },
 new Employee() { EmployeeId = 3, FirstName = "Roy" , LastName = "Thomas",Salary=700000,JoiningDate="01-FEB-13 12.00.00 AM",Department="Banking" },
 new Employee() { EmployeeId = 4, FirstName = "Tom" , LastName = "Jose",Salary=600000,JoiningDate="01-FEB-13 12.00.00 AM",Department="Insurance" },
 new Employee() { EmployeeId = 5, FirstName = "Jerry" , LastName = "Pinto",Salary=650000,JoiningDate="01-FEB-13 12.00.00 AM",Department="Insurance" },
 new Employee() { EmployeeId = 6, FirstName = "Philip" , LastName = "Mathew",Salary=750000,JoiningDate="01-JAN-13 12.00.00 AM",Department="Services" },
 new Employee() { EmployeeId = 7, FirstName = "TestName1" , LastName = "123",Salary=650000,JoiningDate="01-JAN-13 12.00.00 AM",Department="Services" },
-new Employee() { EmployeeId = 8, FirstName = "TestName2" , LastName = "Lname%",Salary=600000,JoiningDate="01-FEB-13 12.00.00 AM",Department="Insurance" },
+new Employee() { EmployeeId = 8, FirstName = "TestName2" , LastName = "Lname%",Salary=600000,JoiningDate="01-FEB-14 12.00.00 AM",Department="Insurance" },
     };
             IList<Incentives> incentives = new List<Incentives>()
             {
@@ -153,6 +153,7 @@ new Incentives() { EmployeeRefId = 2, IncentiveDate = "01-JAN-13" , IncentiveAmo
             /*
              15.  Get FIRST_NAME ,Joining year,Joining Month and Joining Date from employee table
             var joiningDetail = from joining in employee
+                               
                                 select new
                                 {
                                     joining.FirstName, joining.JoiningDate
@@ -162,6 +163,7 @@ new Incentives() { EmployeeRefId = 2, IncentiveDate = "01-JAN-13" , IncentiveAmo
                 Console.WriteLine(detail);
             }
             */
+
 
             /*
              16. Get all employee details from the employee table order by First_Name Ascending
@@ -429,26 +431,70 @@ new Incentives() { EmployeeRefId = 2, IncentiveDate = "01-JAN-13" , IncentiveAmo
                Console.WriteLine(name);
            }
            */
-           /*
-            30. Get employee details from employee table whose name is 'John' and 'Michael'
-            var Employee = from emp in employee
-                           where emp.FirstName == "John" || emp.FirstName == "Roy"
-                           select new
-                           {
-                               emp.EmployeeId,
-                               emp.FirstName,
-                               emp.LastName,
-                               emp.Salary,
-                               emp.JoiningDate,
-                               emp.Department
-                           };
+            /*
+             30. Get employee details from employee table whose name is 'John' and 'Michael'
+             var Employee = from emp in employee
+                            where emp.FirstName == "John" || emp.FirstName == "Michael"
+                            select new
+                            {
+                                emp.EmployeeId,
+                                emp.FirstName,
+                                emp.LastName,
+                                emp.Salary,
+                                emp.JoiningDate,
+                                emp.Department
+                            };
 
-            foreach (var name in Employee)
-            {
-                Console.WriteLine(name);
-            }
-            */
+             foreach (var name in Employee)
+             {
+                 Console.WriteLine(name);
+             }
+             */
+            /*
+           31. Get employee details from employee table whose joining year is “2013”
+             var year = from emp in employee
 
+                             where (emp.JoiningDate.Substring(7,2))==( "13")
+                        select new
+                        {
+                         // y= emp.JoiningDate.Substring(7,2)
+                                emp.EmployeeId,
+                                  emp.FirstName,
+                                  emp.LastName,
+                                  emp.Salary,  
+                                  emp.JoiningDate,
+                                  emp.Department  
+                        };
+
+             foreach(var YEAR in year)
+             {
+                 Console.WriteLine(YEAR);
+             }
+             */
+            /*
+              32. Get employee details from employee table whose joining month is “January”
+              var year = from emp in employee
+
+                         where (emp.JoiningDate.Substring(3,3)) == ("JAN")
+                         select new
+                         {
+                             //  y= emp.JoiningDate.Substring(7,8)
+                             emp.EmployeeId,
+                             emp.FirstName,
+                             emp.LastName,
+                             emp.Salary,
+                             emp.JoiningDate,
+                             emp.Department
+                         };
+
+              foreach (var YEAR in year)
+              {
+                  Console.WriteLine(YEAR);
+              }
+              */
+
+            //33. Get employee details from employee table who joined before January 31st 2013
+          
 
 
 
